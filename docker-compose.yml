@@ -3,8 +3,5 @@ services:
   java:
           image: swapy25/javaimage:1.0
           
-                   
-  git:
-          image: swapy25/git:1.0
           
 
