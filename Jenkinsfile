@@ -10,6 +10,7 @@ pipeline{
         stage('Test'){
             steps{
               sh 'echo "Performing tests for containers...OK"'
+              sh 'mvn --version'
                 }
            }
       }
@@ -17,7 +18,6 @@ pipeline{
         always {
             echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
-            cleanWs()
         }
         success {
             echo 'I succeeeded!'
