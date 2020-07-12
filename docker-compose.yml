@@ -1,10 +1,5 @@
 version: '3'
-services:
-  jenkins:
-          image: swapy25/jenkins1
-          ports:
-                  - "8080:8080"
-      
+services:      
   java:
           image: swapy25/javaimage:1.0
           command: tail -f /dev/null
