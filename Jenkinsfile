@@ -1,17 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage('SCM CheckOut'){
-          steps {
-            git 'https://github.com/swapnil-dot/TCS.git'
-          }
-          }
         stage('Docker-compose'){
            steps{
-             step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: true])
-             step{
-                   sh 'docker-compose up -d'
-               }
+             step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: true],sh 'docker-compose up -d')
+             
                 }
            }
         
