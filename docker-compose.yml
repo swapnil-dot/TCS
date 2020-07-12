@@ -2,29 +2,9 @@ version: '3'
 services:      
   java:
           image: swapy25/javaimage:1.0
-          command: tail -f /dev/null
+          
                    
   git:
           image: swapy25/git:1.0
-          command: tail -f /dev/null
           
-         
-  buildessen:
-          image: swapy25/buildessen:1.0
-          command: tail -f /dev/null
-          
-         
-  maven:
-          image: swapy25/maven
-          command: tail -f /dev/null
-          
-         
-  vim:
-          image: swapy25/vim
-          command: tail -f /dev/null
-          
-         
-  selinium:
-          image: swapy25/selinium1
-          command: tail -f /dev/null
 
