@@ -8,7 +8,6 @@ pipeline{
           }
         stage('Docker-compose'){
            steps{
-             sh 'echo "Running docker-compose.yml......setting up containers!"'
              step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: false])
                 }
            }
@@ -21,7 +20,7 @@ pipeline{
      post {
         always {
             echo 'One way or another, I have finished'
-            /* clean up our workspace */
+            cleanWs()/* clean up our workspace */
         }
         success {
             echo 'I succeeeded!'
