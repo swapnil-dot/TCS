@@ -9,10 +9,5 @@ pipeline{
            }
         
      }
-     post{
-       always{
-           cleanWs()
-             }
-         }
 }
 
