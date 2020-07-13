@@ -1,4 +1,4 @@
-version: "1"
+version: "2"
 services:
   java:
           image: swapy25/javaimage:1.0
