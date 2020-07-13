@@ -1,4 +1,5 @@
 version: '2.4'
+services:
   java:
           image: swapy25/javaimage:1.0
           command: tail -f /dev/null
